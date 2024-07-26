@@ -20,9 +20,9 @@ const FeedbackForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const confirmationMessage = `
-      Name: {formData.name}
-      Email: {formData.email}
-      Feedback: {formData.feedback}
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Feedback: ${formData.feedback}
     `
     const isConfirmed = window.confirm(
       `Please confirm your details:\n\n${confirmationMessage}`
