@@ -3,6 +3,7 @@ nav {
   color: white;
   text-align: center;
   font-size: 2em;
+  padding: 1%;
 }
 .feedback-form {
   max-width: 50vw;
@@ -56,6 +57,13 @@ nav {
 .feedback-form button:hover {
   background-color: #70531a;
   color: #ffffff;
+}
+
+.rating {
+  display: flex;
+  gap: 0.8em;
+  flex-direction: column;
+  margin-bottom: 3%;
 }
 
 /* Media query for smaller screens */
