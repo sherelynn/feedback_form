@@ -8,6 +8,7 @@ const FeedbackForm = () => {
     name: '',
     email: '',
     feedback: '',
+    rating: '',
   })
 
   // Change handlers for form input changes
@@ -23,6 +24,7 @@ const FeedbackForm = () => {
       Name: ${formData.name}
       Email: ${formData.email}
       Feedback: ${formData.feedback}
+      Rating: ${formData.rating}
     `
     const isConfirmed = window.confirm(
       `Please confirm your details:\n\n${confirmationMessage}`
@@ -33,6 +35,7 @@ const FeedbackForm = () => {
         name: '',
         email: '',
         feedback: '',
+        rating: '',
       })
       alert('Thank you for your valuable feedback!')
     }
@@ -71,6 +74,66 @@ const FeedbackForm = () => {
           value={formData.feedback}
           onChange={handleChange}
         ></textarea>
+
+        {/* Add rating feature */}
+        <div className="rating">
+          <p>Rate Us:</p>
+
+          <label htmlFor="rating">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-1"
+              value="1"
+              onChange={handleChange}
+            />{' '}
+            1
+          </label>
+
+          <label htmlFor="rating">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-2"
+              value="2"
+              onChange={handleChange}
+            />{' '}
+            2
+          </label>
+
+          <label htmlFor="rating">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-3"
+              value="3"
+              onChange={handleChange}
+            />{' '}
+            3
+          </label>
+
+          <label htmlFor="rating">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-4"
+              value="4"
+              onChange={handleChange}
+            />{' '}
+            4
+          </label>
+
+          <label htmlFor="rating">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-5"
+              value="5"
+              onChange={handleChange}
+            />{' '}
+            5
+          </label>
+        </div>
 
         <button type="submit">Submit Feedback</button>
       </form>
